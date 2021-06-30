@@ -24,11 +24,12 @@
                 <ImageView
                     android:id="@+id/image_recipe_thumbnail"
                     android:layout_width="match_parent"
-                    android:layout_height="400dp"
+                    android:layout_height="275dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     android:src="@mipmap/ic_launcher"
+                    android:scaleType="center"
                     app:loadImage="@{recipe.strMealThumb}"/>
 
                 <TextView
@@ -37,7 +38,12 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/image_recipe_thumbnail"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="@{recipe.strMeal}" />
+                    android:text="@{recipe.strMeal}"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="25sp"/>
 
                 <TextView
                     android:id="@+id/text_recipe_origin"
@@ -45,7 +51,11 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/text_recipe_name"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="@{recipe.strArea}"/>
+                    android:text="@{recipe.strArea}"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="italic"
+                    android:textSize="18dp"/>
 
                 <Button
                     android:id="@+id/button_favorite"
@@ -53,13 +63,17 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@id/image_recipe_thumbnail"
                     app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
                     android:text="@{recipe.favorite ? String.format(@string/unfavorite) : String.format(@string/favorite)}"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
 
                 <TextView
                     android:id="@+id/text_ingredients_list_title"
@@ -67,7 +81,12 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Ingredients list:"/>
+                    android:text="Ingredients list:"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/text_ingredients_list"
@@ -75,7 +94,10 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/text_ingredients_list_title"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="@{recipe.ingredientsListString}"/>
+                    android:text="@{recipe.ingredientsListString}"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:layout_marginTop="10dp"
@@ -84,7 +106,12 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/text_ingredients_list"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Measures list:"/>
+                    android:text="Measures list:"
+                    android:layout_marginLeft="10dp"
+                    app:layout_goneMarginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
 
                 <TextView
                     android:id="@+id/text_measures_list"
@@ -92,14 +119,18 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/text_measures_list_title"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="@{recipe.measuresListString}"/>
+                    android:text="@{recipe.measuresListString}"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp">
 
                 <TextView
                     android:id="@+id/text_instructions_title"
@@ -107,7 +138,12 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Instructions:"/>
+                    android:text="Instructions:"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
 
                 <TextView
                     android:id="@+id/text_instructions"
@@ -115,7 +151,11 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/text_instructions_title"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="@{recipe.strInstructions}"/>
+                    android:text="@{recipe.strInstructions}"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

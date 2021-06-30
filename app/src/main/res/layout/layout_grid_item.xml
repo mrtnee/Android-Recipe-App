@@ -22,13 +22,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            app:cardCornerRadius="4sp"
-            app:cardElevation="2dp">
+            android:layout_margin="5dp"
+            app:cardCornerRadius="10dp"
+            android:elevation="5dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5sp">
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/image_recipe_thumbnail"
@@ -43,10 +43,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/image_recipe_thumbnail"
-                    android:layout_marginTop="10sp"
+                    android:layout_margin="10dp"
                     android:text="@{recipe.strMeal}"
-                    android:textColor="#000"
-                    android:textSize="20sp" />
+                    android:textColor="#303030"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
 
 
             </RelativeLayout>
